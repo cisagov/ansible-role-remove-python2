@@ -1,0 +1,12 @@
+---
+# vars file for Debian
+
+# The Python2 package names
+package_names:
+  - python
+  - python-dev
+  # This is the package that actually provides /usr/bin/python.  We
+  # want /usr/bin/python to not exist, since if it does then Ansible
+  # will use it as its python.
+  - python-minimal
+  - python-pip

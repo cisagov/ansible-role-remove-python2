@@ -12,7 +12,9 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 ).get_hosts("all")
 
 
-@pytest.mark.parametrize("x", [True])
-def test_packages(host, x):
-    """Run a dummy test, just to show what one would look like."""
-    assert x
+@pytest.mark.parametrize(
+    "f", ["/usr/bin/python", "/usr/bin/python2", "/usr/bin/python2.7"]
+)
+def test_python(host, f):
+    """Ensure that python2-specific files no longer exist."""
+    assert not host.file(f).exists

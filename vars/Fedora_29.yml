@@ -1,0 +1,12 @@
+---
+# vars file for Fedora 29
+
+# The Python2 package names
+package_names:
+  - python
+  - python-devel
+  - python-pip
+  - python-unversioned-command
+  - python2
+  - python2-devel
+  - python2-pip

@@ -1,0 +1,7 @@
+---
+- name: Remove python2 (Debian)
+  apt:
+    name: "{{ package_names }}"
+    state: absent
+    # This gets rid of any dangling python2 packages
+    autoremove: yes
