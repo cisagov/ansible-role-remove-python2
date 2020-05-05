@@ -6,4 +6,3 @@ package_names:
   - python-unversioned-command
   - python2
   - python2-devel
-  - python2-pip
