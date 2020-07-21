@@ -1,6 +1,1 @@
----
-- name: Do nothing
-  assert:
-    that:
-      - true
-    quiet: yes
+remove_Amazon.yml

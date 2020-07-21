@@ -9,10 +9,8 @@ lint: |
   ansible-lint
   flake8
 platforms:
-  # Python2 is required for the version of yum used by Amazon Linux 2.
-  # Therefore python2 cannot be removved from this distribution.
-  # - name: amazonlinux2
-  #   image: amazonlinux:2
+  - name: amazonlinux2
+    image: amazonlinux:2
   - name: debian9
     image: debian:stretch-slim
     dockerfile: Dockerfile_debian_9.j2

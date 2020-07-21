@@ -17,10 +17,10 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     "f", ["/usr/bin/python", "/usr/bin/python2", "/usr/bin/python2.7"]
 )
 def test_python(host, f):
-    """Ensure that python2-specific files no longer exist, except on Debian 9."""
+    """Ensure that python2-specific files no longer exist, except on AmazonLinux or Debian 9."""
     # Note that r"^9(\.|$)" will match any string starting with "9.",
     # or the string "9".
-    if (
+    if host.system_info.distribution == "amzn" or (
         host.system_info.distribution == "debian"
         and re.match(r"^9(\.|$)", host.system_info.release) is not None
     ):
