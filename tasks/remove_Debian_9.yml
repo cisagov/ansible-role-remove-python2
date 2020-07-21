@@ -1,0 +1,6 @@
+---
+- name: Do nothing
+  assert:
+    that:
+      - true
+    quiet: yes

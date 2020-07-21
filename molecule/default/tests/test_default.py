@@ -16,5 +16,8 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
     "f", ["/usr/bin/python", "/usr/bin/python2", "/usr/bin/python2.7"]
 )
 def test_python(host, f):
-    """Ensure that python2-specific files no longer exist."""
-    assert not host.file(f).exists
+    """Ensure that python2-specific files no longer exist, except on Debian 9."""
+    if host.system_info.distribution == "debian" and host.system_info.release == "9.12":
+        assert host.file(f).exists
+    else:
+        assert not host.file(f).exists
