@@ -6,4 +6,3 @@
   roles:
     - pip
     - python
-    - remove_python2
