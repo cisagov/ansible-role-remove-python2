@@ -1,5 +1,7 @@
 ---
 - name: Converge
   hosts: all
-  roles:
-    - role: ansible-role-remove-python2
+  tasks:
+    - name: Include ansible-role-remove-python2
+      ansible.builtin.include_role:
+        name: ansible-role-remove-python2
