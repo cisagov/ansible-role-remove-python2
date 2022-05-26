@@ -4,9 +4,10 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-remove-python2.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-remove-python2/alerts/)
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-remove-python2.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-remove-python2/context:python)
 
-An Ansible role for removing all Python2 packages on all distributions
-other than Debian 9 (stretch).  Python2 is preserved on Debian 9 for
-the time being.
+An Ansible role for removing all Python 2 packages on all distributions
+other than Debian 9 (stretch) and Amazon Linux.  Python 2 is preserved
+on Debian 9 for the time being, and Amazon Linux requires Python 2 for
+its outdated `yum` command.
 
 ## Requirements ##
 
