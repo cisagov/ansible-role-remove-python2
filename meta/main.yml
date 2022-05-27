@@ -1,9 +1,7 @@
 ---
 galaxy_info:
   author: Shane Frasier
-  description: >
-      Remove all python2 packages, except on AmazonLinux 2 and Debian
-      9 (Stretch)
+  description: Remove all python2 packages, except on AmazonLinux 2
   company: CISA Cyber Assessments
   galaxy_tags:
     - python
