@@ -36,7 +36,7 @@ Here's how to use it in a playbook:
   become: yes
   become_method: sudo
   roles:
-    - no_python2
+    - remove_python2
 ```
 
 ## Contributing ##
