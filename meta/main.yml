@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Shane Frasier
-  description: Remove all python2 packages, except on AmazonLinux 2
+  description: Remove all Python 2 packages, except on Amazon Linux 2
   company: CISA Cyber Assessments
   galaxy_tags:
     - python
@@ -15,8 +15,8 @@ galaxy_info:
   min_ansible_version: 2.10
   namespace: cisagov
   platforms:
-    # Python2 is required for the version of yum used by Amazon Linux
-    # 2.  Therefore python2 cannot be removved from this distribution.
+    # Python 2 is required for the version of yum used by Amazon Linux
+    # 2.  Therefore Python 2 cannot be removved from this distribution.
     - name: Amazon
       versions:
         - 2
