@@ -16,7 +16,7 @@ galaxy_info:
   namespace: cisagov
   platforms:
     # Python 2 is required for the version of yum used by Amazon Linux
-    # 2.  Therefore Python 2 cannot be removved from this distribution.
+    # 2.  Therefore Python 2 cannot be removed from this distribution.
     - name: Amazon
       versions:
         - 2
