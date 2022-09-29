@@ -1,8 +1,5 @@
 ---
-# vars file for RedHat
-
-# The Python2 package names
+# The Python 2 package names
 package_names:
   - python-unversioned-command
-  - python2
-  - python2-devel
+  - python2.7

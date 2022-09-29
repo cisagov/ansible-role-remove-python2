@@ -1,7 +1,7 @@
 ---
-- name: Remove python2 (RedHat)
+- name: Remove Python 2 (RedHat)
   ansible.builtin.dnf:
     name: "{{ package_names }}"
     state: absent
-    # This gets rid of any dangling python2 packages
+    # This gets rid of any dangling Python 2 packages
     autoremove: yes
