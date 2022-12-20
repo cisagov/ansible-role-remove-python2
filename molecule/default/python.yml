@@ -1,0 +1,16 @@
+---
+# We install Python 3 into the Debian Stretch image for two reasons:
+# 1. It is not installed by default.
+# 2. Without Python 3 installed, when Python 2 is removed by this role there is
+#    no Python interpreter available when molecule runs idempotence.
+- hosts: all
+  name: Install Python 3 on Debian Stretch
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Install Python 3
+      ansible.builtin.include_role:
+        name: python
+      when:
+        - ansible_distribution == "Debian"
+        - ansible_distribution_release == "stretch"
