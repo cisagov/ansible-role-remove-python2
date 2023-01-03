@@ -1,8 +1,7 @@
 # ansible-role-remove-python2 #
 
 [![GitHub Build Status](https://github.com/cisagov/ansible-role-remove-python2/workflows/build/badge.svg)](https://github.com/cisagov/ansible-role-remove-python2/actions)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/cisagov/ansible-role-remove-python2.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-remove-python2/alerts/)
-[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/cisagov/ansible-role-remove-python2.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/cisagov/ansible-role-remove-python2/context:python)
+[![CodeQL](https://github.com/cisagov/ansible-role-remove-python2/workflows/CodeQL/badge.svg)](https://github.com/cisagov/ansible-role-remove-python2/actions/workflows/codeql-analysis.yml)
 
 An Ansible role for removing all Python 2 packages on all distributions
 other than Amazon Linux 2.  Python 2 is preserved on Amazon Linux 2
@@ -35,8 +34,10 @@ Here's how to use it in a playbook:
 - hosts: all
   become: yes
   become_method: sudo
-  roles:
-    - remove_python2
+  tasks:
+    - name: Remove Python 2
+      ansible.builtin.include_role:
+        name: remove_python2
 ```
 
 ## Contributing ##
