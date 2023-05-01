@@ -16,24 +16,21 @@ galaxy_info:
   min_ansible_version: "2.10"
   namespace: cisagov
   platforms:
-    # Python 2 is required for the version of yum used by Amazon Linux
-    # 2.  Therefore Python 2 cannot be removed from this distribution.
-    - name: Amazon Linux 2
+    - name: Amazon Linux 2023
       versions:
         - any
     - name: Debian
       versions:
-        - stretch
         - buster
         - bullseye
-        # Kali linux isn't an option here, but it is based on
-        # Debian Testing:
-        # https://www.kali.org/docs/policy/kali-linux-relationship-with-debian
         - bookworm
     - name: Fedora
       versions:
         - "36"
         - "37"
+    - name: Kali
+      versions:
+        - "2023"
     - name: Ubuntu
       versions:
         - bionic
