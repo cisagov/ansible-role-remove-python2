@@ -1,6 +1,0 @@
----
-- name: Do nothing
-  ansible.builtin.assert:
-    that:
-      - true
-    quiet: yes
