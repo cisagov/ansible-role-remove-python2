@@ -4,4 +4,4 @@
     name: "{{ package_names }}"
     state: absent
     # This gets rid of any dangling Python 2 packages
-    autoremove: yes
+    autoremove: true
